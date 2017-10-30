@@ -52,6 +52,9 @@ pred=reg.predict(features_test)
 
 
 pred_=reg.predict(feat_new)
+pred_1=reg.pred(feat_1)
+pred_2=reg.pred(feat_2)
+
 
 
 
@@ -73,9 +76,12 @@ plt.scatter(feature_test[0], target_test[0], color=train_color, label="train")
 
 ### draw the regression line, once it's coded
 try:
+    a=0
+    print("init")
     plt.plot( feature_test, reg.predict(feature_test) )
 except NameError:
     pass
+    print("init end")
 plt.xlabel(features_list[1])
 plt.ylabel(features_list[0])
 plt.legend()
