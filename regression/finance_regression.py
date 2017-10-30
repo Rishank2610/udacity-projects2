@@ -17,7 +17,9 @@ import sys
 import pickle
 sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
+import sklearn
 dictionary = pickle.load( open("../final_project/final_project_dataset_modified.pkl", "r") )
+
 
 ### list the features you want to look at--first item in the 
 ### list will be the "target" feature
@@ -49,7 +51,7 @@ print ("Score : ",reg.score(feature_test,target_test))
 pred=reg.predict(features_test)
 
 
-
+pred_=reg.predict(feat_new)
 
 
 
